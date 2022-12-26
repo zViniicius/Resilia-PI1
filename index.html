@@ -161,19 +161,9 @@
         <!-- Bloco 3 -->
         <div id="bloco3" class="flex-row">
           <div id="img6" class="flex-column align-i-center">
-            <a href="//encurtador.com.br/nwF18" target="_blank"
-              ><div class="foto flex-row">
-                <img
-                  src="assets/img/hobbies/Mcz-Left.jpg"
-                  width="640px"
-                  style="border-radius: 10px 0 0 10px"
-                />
-                <img
-                  src="assets/img/hobbies/Mcz-Right.jpg"
-                  width="640px"
-                  style="border-radius: 0 10px 10px 0"
-                /></div
-            ></a>
+            <a href="//encurtador.com.br/nwF18" target="_blank">
+              <img class="foto" src="assets/img/hobbies/Mcz.png" />
+            </a>
             <h3>Praia da Ponta Verde, Maceió - AL</h3>
           </div>
 
@@ -213,8 +203,13 @@
             <div class="inputField flex-column">
               <label for="selectAssunto" class="formLabel">Assunto</label>
               <select class="field" id="selectAssunto">
+                <option selected disabled value="">
+                  Selecione um assunto...
+                </option>
                 <option value="Consultoria">Consultoria</option>
-                <option value="Desenvolvimento">Desenvolvimento</option>
+                <option value="Desenvolvimento">
+                  Desenvolvimento de software
+                </option>
                 <option value="Outros">Outros</option>
               </select>
             </div>
