@@ -14,10 +14,9 @@
         <div class="container flex-row">
           <!-- Logo -->
           <div class="logo flex-row">
-            <img id="imgLogo" src="assets/img/favicon.svg" width="64px" /><span
-              id="navTitle"
-              >Vinicius's Page</span
-            >
+            <a href="#"
+              ><img id="imgLogo" src="assets/img/favicon.svg" width="64px" /></a
+            ><span id="navTitle">Vinicius's Page</span>
           </div>
           <!-- Menu Links -->
           <div class="menuLinks">
@@ -60,6 +59,11 @@
                 /></a>
               </li>
             </ul>
+
+            <label class="sliderLang" title="Alterar idioma do site">
+              <input type="checkbox" id="changeLang" />
+              <span class="switch"></span
+            ></label>
           </div>
         </div>
       </nav>
@@ -184,6 +188,7 @@
       <!-- Seção Contato -->
       <section id="contact" class="contact flex-column">
         <div class="container">
+          <h3>Entrar em contato</h3>
           <form action="">
             <div class="inputField flex-column">
               <label for="inputName" class="formLabel">Nome</label>
@@ -193,7 +198,7 @@
                 id="inputName"
                 placeholder="Seu nome"
               />
-              <div class="line"></div>
+              <span class="line"></span>
             </div>
             <div class="inputField flex-column">
               <label for="inputEmail" class="formLabel">Email</label>
@@ -203,7 +208,7 @@
                 id="inputEmail"
                 placeholder="Seu email"
               />
-              <div class="line"></div>
+              <span class="line"></span>
             </div>
             <div class="inputField flex-column">
               <label for="selectAssunto" class="formLabel">Assunto</label>
@@ -222,7 +227,7 @@
                 rows="50"
                 cols="50"
               ></textarea>
-              <div class="line"></div>
+              <span class="line"></span>
             </div>
             <button class="btn flex">Enviar</button>
           </form>

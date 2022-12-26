@@ -250,6 +250,36 @@ nav .container {
   transform: scale(0.75);
 }
 
+.sliderLang {
+  position: absolute;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  left: -70px;
+  top: 10px;
+}
+.sliderLang input {
+  width: 0;
+}
+.switch {
+  position: absolute;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  background: url('/assets/img/icon-lang/pt-br.png');
+  background-size: cover;
+  background-position: center;
+  transition: 0.3s;
+}
+input:checked ~ .switch {
+  transform: translateX(25px);
+  background: url('/assets/img/icon-lang/en-us.png');
+  background-size: cover;
+  background-position: center;
+}
+
 /* Seção Sobre min */
 .round-profile {
   width: 260px;
@@ -294,13 +324,14 @@ nav .container {
   align-items: center;
 }
 .foto {
+  scale: 0.95;
   width: 240px;
   border-radius: 10px;
   transition: all 0.4s;
   box-shadow: var(--shadow-box-config);
 }
 .foto:hover {
-  scale: 0.95;
+  scale: 1;
 }
 #img6 > a > .foto {
   width: 1280px;
@@ -367,7 +398,7 @@ section .container {
   transition: 0.5s;
   background: var(--bg-input);
   background-size: 200% auto;
-  color: var(var(--light-text));
+  color: var(--light-text);
   box-shadow: var(--shadow-box-config);
   border-radius: 5px;
   border: none;
