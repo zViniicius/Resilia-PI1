@@ -11,7 +11,7 @@
   );
   --bg-input: #1d1d53;
   --dark-text: #363636;
-  --light-text: #f7f6f6;
+  --light-text: #fafafa;
   --shadow-box-config: #14143fc4 0px 0px 7px 5px;
   --placeholder-color: rgb(112, 97, 194);
 }
@@ -37,6 +37,10 @@
 }
 ::-webkit-scrollbar-track:active {
   background: rgb(73, 93, 219);
+}
+::selection {
+  background: #2d13a5;
+  color: rgb(255, 255, 255);
 }
 
 /* Media Query */
@@ -113,19 +117,13 @@
 }
 @keyframes loadProfile {
   0% {
-    -webkit-transform: perspective(800px) rotateY(220deg) scale(0.9)
-      rotateX(10deg);
     transform: perspective(800px) rotateY(220deg) scale(0.9) rotateX(10deg);
-    -webkit-filter: blur(2px);
     filter: blur(2px);
     opacity: 0.5;
   }
   100% {
-    -webkit-transform: perspective(897px) rotateY(0deg) translateY(3px)
-      rotateX(0deg) scale(1);
     transform: perspective(897px) rotateY(0deg) translateY(3px) rotateX(0deg)
       scale(1);
-    -webkit-filter: blur(0);
     filter: blur(0);
     opacity: 1;
   }
@@ -276,13 +274,16 @@ nav .container {
   background: url('/assets/img/icon-lang/pt-br.png');
   background-size: cover;
   background-position: center;
-  transition: 0.3s;
+  transition: all 0.3s;
 }
 input:checked ~ .switch {
   transform: translateX(25px);
   background: url('/assets/img/icon-lang/en-us.png');
   background-size: cover;
   background-position: center;
+}
+.switch:hover {
+  scale: 1.1;
 }
 
 /* Seção Sobre min */
@@ -311,10 +312,23 @@ input:checked ~ .switch {
   font-size: 68px;
   animation: pulse 1s reverse;
 }
+
+.knowme h3 {
+  animation: pulse 1.5s reverse;
+}
+.knowme h4 {
+  animation: pulse 2s reverse;
+}
 #resumo {
-  margin-top: 20px;
+  opacity: 0.8;
+  transition: transform 1.5s 1.5s, opacity 0.2s, scale 0.5s;
+  transform: translateY(20px);
   font-style: italic;
   text-align: justify;
+}
+#resumo:hover {
+  opacity: 1;
+  scale: 1.02;
 }
 
 /* Seção Hobbies */
